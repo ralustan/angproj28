@@ -8,8 +8,11 @@ pipeline {
             }
         }
         stage('Test') {
-            steps {
-               sh "ng test --browsers=Headless --no-watch"
+            withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
+              sh 'ng test --progress=false --watch false'
+        }
+        junit '**/test-results.xml'
+    }
             }
         }
     }
