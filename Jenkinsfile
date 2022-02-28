@@ -13,7 +13,7 @@ pipeline {
         }
         junit '**/test-results.xml'
     }
-            }
-        }
+            
+        
     }
 }
