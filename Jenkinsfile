@@ -11,7 +11,7 @@ pipeline {
             
               sh 'ng test --progress=false --watch false'
         }
-        junit '**/test-results.xml'
+        
     }
             
         
