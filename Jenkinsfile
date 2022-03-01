@@ -1,5 +1,5 @@
 pipeline {
-  agent { docker { image 'trion/ng-cli-karma:6.2.1' } }
+  agent any
     stages {
         stage('Build') {
             steps {
